@@ -6,7 +6,6 @@ def main_menu():
         print("2. Pasajes")
         print("3. Exit")
 
-
         menu = int(input("Elija la opcion: "))
 
         if menu == 1:
@@ -15,9 +14,9 @@ def main_menu():
                 print("Main Menu:")
                 print("1. Nuevo Cliente")
                 print("2. Lista de Clientes")
-                print("2. Modificar Cliente")
-                print("3. Borrar Cliente")
-                print("3. Exit")
+                print("3. Modificar Cliente")
+                print("4. Borrar Cliente")
+                print("5. Exit")
                 menuClientes = int(input("Elija la opcion: "))
                 if menuClientes == 1:
                         print("Ingrese los datos del nuevo cliente")
@@ -31,9 +30,17 @@ def main_menu():
                         input("presiona enter para salir...")
                         break
                 elif menuClientes == 2:
-                        print("You selected Option 2")
+                        print("Lista de Clientes")
                         input("presiona enter para salir...")
                 elif menuClientes == 3:
+                        print("Modificar Cliente")
+                        print("Ingrese el ID del cliente a modificar")
+                        input("presiona enter para salir...")
+                elif menuClientes == 4:
+                        print("Borrar Cliente")
+                        print("Ingrese el ID del cliente a borrar")
+                        input("presiona enter para salir...")    
+                elif menuClientes == 5:
                         print("Exiting...")
                         break
                 else: 
