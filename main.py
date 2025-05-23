@@ -66,10 +66,9 @@ def main_menu():
         print("2. Gestionar Destinos")
         print("3. Gestionar Ventas")
         print("4. Botón de Arrepentimiento")
-        print("5. Botón de Arrepentimiento")
-        print("6. Ver Reporte General")
-        print("7. Acerca del Sistema")
-        print("8. Salir")
+        print("5. Ver Reporte General")
+        print("6. Acerca del Sistema")
+        print("7. Salir")
 
         menu = int(input("Elija la opcion: "))
 
@@ -97,20 +96,25 @@ def main_menu():
                 elif menuClientes == 2:
                         print("Ingrese los datos del Nuevo Cliente")
                         nombre = input("Nombre: ")
-                        apellido = input("Apellido: ")
-                        fechaNacimiento = input("fecha de Nacimiento: ")
+                        cuil_cuit = input("Ingrese N° de CUIT o CUIL: ")
                         telefono = input("Telefono: ")
                         email = input("Email: ")
                         print("Cliente registrado con exito")
-                        print("Se guardó el cliente, sus datos son: Nombre:", nombre, "Apellido:", apellido, "fechaNacimiento:", fechaNacimiento, "Telefono:", telefono, "Email:", email)           
+                        print("Se guardó el cliente, sus datos son: Nombre:", nombre, "CUIL o CUIT", cuil_cuit, "Telefono:", telefono, "Email:", email)           
                         input("presiona enter para salir...")
                 elif menuClientes == 3:
                         print("Modificar Cliente")
-                        print("Ingrese el ID del cliente a modificar")
+                        print("Ingrese el CUIL_CUIT del cliente a modificar")
+                        "futuro codigo, incluye select y un update"
+                        "print('verifique sus datos')"
+                        "print('sus datos fueron corregidos correctamente)"                                
                         input("presiona enter para salir...")
                 elif menuClientes == 4:
                         print("Borrar Cliente")
-                        print("Ingrese el ID del cliente a borrar")
+                        print("Ingrese el CUIL_CUIT del cliente a borrar")
+                        "futuro codigo, incluye select y un delete"
+                        "print('Esta seguro que desea eliminar el cliente: CUIT:XXXXXXXXX')"
+                        "print('Cliente CUIT:XXXXXXXXXXX correctamente eliminado de la base)"
                         input("presiona enter para salir...")    
                 elif menuClientes == 5:
                         break
@@ -120,10 +124,44 @@ def main_menu():
             print("You selected Option 2")
             input("Press Enter to continue...")
         elif menu == 3:
-            print("Exiting...")
+            print("Saliendo...")
             break
-        else:
-            print("Opcion Invalida-ingrese una opcion valida")
-            input("presiona enter para volver al menu anterior...") 
+        elif menu == 6:
+            print("\n--- Acerca del Sistema ---")
+            print("SkyRoute - Sistema de Gestión de Pasajes")
+            print("Versión: 1.0")
+            print("Desarrollado por los integrantes del grupo:\n")
+            print("- Mechiorre Mariano Sebastián, DNI: 29.252.427")
+            print("- Melchorre Alejandra Cristina, DNI: 24.286.870")
+            print("- Roque Martín Miguel, DNI: 23.824.997")
+            print("- Quispe Christian, DNI: 23.198.068")
+            print("- Heredia Joel, DNI: 41.158.023\n")
+
+            print("Descripción:")
+            print("Este sistema permite gestionar clientes, destinos y ventas de pasajes,")
+            print("incluyendo funcionalidades como consultas, reportes y botón de arrepentimiento.\n")
+
+            print("Derechos de autor:")
+            print("© 2025 SkyRoute. Todos los derechos reservados.")
+            print("Este software es propiedad exclusiva de los desarrolladores mencionados.")
+            print("Queda estrictamente prohibida la copia, distribución, modificación o uso no autorizado")
+            print("de este código sin el consentimiento explícito por escrito de los autores.\n")
+
+            input("Presione Enter para volver al menú principal...")
+        elif menu == 7:
+                print("Esta seguro de salir")
+                print("1. Si")
+                print("2. No")
+                menuSalir = int(input("Elija la opcion: "))
+                if menuSalir == 1:
+                        print("Saliendo...")
+                        break
+                elif menuSalir == 2:
+                        print("Volviendo al menu principal...")
+                else:
+                        print("Opcion Invalida-ingrese una opcion valida")
+                        input("presiona enter para volver al menu anterior...") 
+                
+        
 if __name__ == "__main__":
     main_menu()
