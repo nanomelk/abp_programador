@@ -1,4 +1,3 @@
-# ==============================================================================
 # Propósito del Sistema:
 #
 # Este programa es una aplicacion por consola funcionamiento básico de un sistema 
@@ -43,9 +42,6 @@
 #   Datos de los integrantes del grupo:
 #
 # - Mechiorre Mariano Sebastián, DNI: 29.252.427
-# - Melchorre Alejandra Cristina, DNI: 24.286.870
 # - Roque Martín Miguel, DNI: 23.824.997
 # - Quispe Christian, DNI 23.198.068
 # - Heredia Joel, DNI 41.158.023
-#
-# ==============================================================================
