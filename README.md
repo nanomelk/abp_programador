@@ -1,4 +1,4 @@
-### Propósito del Sistema:
+Propósito del Sistema:
 #
 ### Este programa es una aplicacion por consola funcionamiento básico de un sistema 
 # de gestión de pasajes de una empresa SkyRoute. El objetivo es permitir
