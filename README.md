@@ -93,3 +93,39 @@ Botón de Arrepentimiento: Es una función obligatoria por ley (Ley 24.240 y Ley
 📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
 ABP_ETICA_2da_entrega.pdf
 
+🧩 Diseño de Base de Datos
+Se diseñó una base de datos relacional con las siguientes entidades y atributos:
+
+CLIENTES
+Atributos: cuit, razón_social, correo_electronico
+
+PK: cuit
+
+VENTAS
+Atributos: código_ventas, cuit, código_destino, código_estado, fecha_venta
+
+PK: código_ventas
+
+FK: cuit, código_destino, código_estado
+
+ESTADO
+Atributos: código_estado, tipo_estado
+
+PK: código_estado
+
+Se usa para optimizar almacenamiento y permitir nuevos estados en el futuro.
+
+DESTINO
+Atributos: código_destino, codigo_ciudad, costo_viaje
+
+PK: código_destino
+
+PAISES
+Atributos: código_pais, nombre_pais
+
+PK: código_pais
+
+Ayuda a mantener la base en tercera forma normal y evitar dependencias transitivas.
+
+Más detalles disponibles en el archivo: Entidades y Atributos elegidos para el diseño de la Base de Datos.pdf
+
