@@ -1,5 +1,13 @@
 # ✈️ SkyRoute - Sistema de Gestión de Pasajes
 
+## 👥 Integrantes del Grupo
+
+- **Mechiorre Mariano Sebastián** - DNI: 29.252.427  
+- **Roque Martín Miguel** - DNI: 23.824.997  
+- **Quispe Christian** - DNI: 23.198.068  
+- **Heredia Joel** - DNI: 41.158.023  
+
+
 ## 📌 Propósito del Sistema
 
 Este programa es una aplicación por consola que simula el funcionamiento básico de un sistema de gestión de pasajes para la empresa **SkyRoute**.  
@@ -65,10 +73,23 @@ python main.py
 (O `python3 main.py` si es necesario en tu sistema)
 
 ---
+🧾 Consideraciones Éticas y Legales
+Este proyecto no solo aborda aspectos técnicos, sino también los aspectos legales y éticos relacionados con el desarrollo del software para SkyRoute S.R.L.
 
-## 👥 Integrantes del Grupo
+A continuación, se resumen los principales puntos tratados en el informe de Ética:
 
-- **Mechiorre Mariano Sebastián** - DNI: 29.252.427  
-- **Roque Martín Miguel** - DNI: 23.824.997  
-- **Quispe Christian** - DNI: 23.198.068  
-- **Heredia Joel** - DNI: 41.158.023  
+Figura Legal del Grupo: El grupo operará como una Sociedad por Acciones Simplificada (SAS) bajo el nombre ROCKET SAS, lo que brinda flexibilidad, protección patrimonial y facilidad para atraer inversiones.
+
+Relación con SkyRoute S.R.L.: Se establecerá mediante un contrato de licencia de uso, manteniendo ROCKET SAS la propiedad del software. Se incluye soporte técnico y mantenimiento.
+
+Cambio de Proveedor: En caso de que SkyRoute decida contratar a otro grupo, ROCKET SAS actuará conforme a las cláusulas contractuales, protegiendo los intereses de la sociedad.
+
+Propiedad de los Datos: Los datos ingresados en el sistema son propiedad de SkyRoute S.R.L., quien es el "responsable del tratamiento" según la Ley 25.326 de protección de datos personales.
+
+Propiedad del Código: El código fuente es propiedad de ROCKET SAS, conforme a la Ley de Propiedad Intelectual (Ley 11.723).
+
+Botón de Arrepentimiento: Es una función obligatoria por ley (Ley 24.240 y Ley 26.994), que permite a los consumidores revocar operaciones realizadas digitalmente en un plazo de hasta 60 días hábiles.
+
+📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
+ABP_ETICA_2da_entrega.pdf
+
