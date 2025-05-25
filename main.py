@@ -39,11 +39,10 @@
 #     d. El programa se iniciará y debería mostrar un menú de opciones
 #        en la consola [11]. Interactúe con el programa seleccionando las
 #        opciones del menú.
-#
+#|
 #   Datos de los integrantes del grupo:
 #
 # - Mechiorre Mariano Sebastián, DNI: 29.252.427
-# - Melchorre Alejandra Cristina, DNI: 24.286.870
 # - Roque Martín Miguel, DNI: 23.824.997
 # - Quispe Christian, DNI 23.198.068
 # - Heredia Joel, DNI 41.158.023
@@ -95,23 +94,47 @@ def main_menu():
                         input("presiona enter para salir...")
                 elif menuClientes == 2:
                         print("Ingrese los datos del Nuevo Cliente")
-                        nombre = input("Nombre: ")
+                        razon_social = input("Ingrese Nombre y Apellido o Razon Social: ")
                         cuil_cuit = input("Ingrese N° de CUIT o CUIL: ")
                         telefono = input("Telefono: ")
                         email = input("Email: ")
                         print("Cliente registrado con exito")
-                        print("Se guardó el cliente, sus datos son: Nombre:", nombre, "CUIL o CUIT", cuil_cuit, "Telefono:", telefono, "Email:", email)           
+                        print("Se guardó el cliente, sus datos son: Nombre:", razon_social)
+                        print("El CUIL o CUIT", cuil_cuit)
+                        print("Telefono:", telefono)
+                        print("Email:", email)           
                         input("presiona enter para salir...")
                 elif menuClientes == 3:
                         print("Modificar Cliente")
                         print("Ingrese el CUIL_CUIT del cliente a modificar")
                         "futuro codigo, incluye select y un update"
-                        "print('verifique sus datos')"
-                        "print('sus datos fueron corregidos correctamente)"                                
+                        cuitModif = input("Ingrese el CUIT o CUIL del cliente a modificar: ")
+                        print('Desea modificar los siguientes datos del cliente:', cuitModif, "de Juan Perez")
+                        print("1. Si")
+                        print("2. No")
+                        menuModif = int(input("Elija la opcion: "))     
+                        if menuModif == 1:
+                                print("Ingrese los nuevos datos del cliente")
+                                razon_social = input("Ingrese Nombre y Apellido o Razon Social: ")
+                                cuil_cuit = input("Ingrese N° de CUIT o CUIL: ")
+                                telefono = input("Telefono: ")
+                                email = input("Email: ")
+                                print("Cliente modificado con exito")
+                                print("Se guardó el cliente, sus datos son: Nombre:", razon_social)
+                                print("El CUIL o CUIT", cuil_cuit)
+                                print("Telefono:", telefono)
+                                print("Email:", email)
+                                print("sus datos fueron corregidos correctamente")
+                        elif menuModif == 2:
+                                print("Volviendo al menu anterior...")
+                        else:
+                                print("Opcion Invalida-ingrese una opcion valida")                               
                         input("presiona enter para salir...")
                 elif menuClientes == 4:
                         print("Borrar Cliente")
                         print("Ingrese el CUIL_CUIT del cliente a borrar")
+                        cuitDelete = input("Ingrese el CUIT o CUIL del cliente a modificar: ")
+                        print('Desea eliminar el cliente:', cuitDelete)
                         "futuro codigo, incluye select y un delete"
                         "print('Esta seguro que desea eliminar el cliente: CUIT:XXXXXXXXX')"
                         "print('Cliente CUIT:XXXXXXXXXXX correctamente eliminado de la base)"
@@ -132,7 +155,6 @@ def main_menu():
             print("Versión: 1.0")
             print("Desarrollado por los integrantes del grupo:\n")
             print("- Mechiorre Mariano Sebastián, DNI: 29.252.427")
-            print("- Melchorre Alejandra Cristina, DNI: 24.286.870")
             print("- Roque Martín Miguel, DNI: 23.824.997")
             print("- Quispe Christian, DNI: 23.198.068")
             print("- Heredia Joel, DNI: 41.158.023\n")
