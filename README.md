@@ -25,7 +25,7 @@ Este proyecto utiliza una **base de datos relacional** para la persistencia de l
 
 # ⚙️ Cómo instalar y ejecutar el programa
 
-# 1. Instalar Python
+1. Instalar Python
 
 Este programa requiere tener instalado el intérprete de **Python** (recomendamos la última versión compatible).
 
@@ -42,7 +42,7 @@ python --version
 
 ---
 
-# 2. Obtener el archivo del programa
+2. Obtener el archivo del programa
 
 Puedes obtener el archivo `main.py` de las siguientes maneras:
 
@@ -55,7 +55,7 @@ git clone https://github.com/nanomelk/abp_programador.git
 
 ---
 
-# 3. Ejecutar el programa
+3. Ejecutar el programa
 
 1. Abre una terminal o línea de comandos.
 2. Navega a la carpeta donde se encuentra `main.py`:
@@ -73,7 +73,7 @@ python main.py
 (O `python3 main.py` si es necesario en tu sistema)
 
 ---
-##🧾 Consideraciones Éticas y Legales
+## 🧾 Consideraciones Éticas y Legales
 Este proyecto no solo aborda aspectos técnicos, sino también los aspectos legales y éticos relacionados con el desarrollo del software para SkyRoute S.R.L.
 
 A continuación, se resumen los principales puntos tratados en el informe de Ética:
@@ -90,12 +90,12 @@ Propiedad del Código: El código fuente es propiedad de ROCKET SAS, conforme a 
 
 Botón de Arrepentimiento: Es una función obligatoria por ley (Ley 24.240 y Ley 26.994), que permite a los consumidores revocar operaciones realizadas digitalmente en un plazo de hasta 60 días hábiles.
 
-# 📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
+📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
 ABP_ETICA_2da_entrega.pdf
 
 ---
 
-##🧩 Diseño de Base de Datos
+## 🧩 Diseño de Base de Datos
 Se diseñó una base de datos relacional con las siguientes entidades y atributos:
 
 CLIENTES
@@ -129,5 +129,5 @@ PK: código_pais
 
 Ayuda a mantener la base en tercera forma normal y evitar dependencias transitivas.
 
-#Más detalles disponibles en el archivo: Entidades y Atributos elegidos para el diseño de la Base de Datos.pdf
+Más detalles disponibles en el archivo: Entidades y Atributos elegidos para el diseño de la Base de Datos.pdf
 
