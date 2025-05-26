@@ -8,7 +8,7 @@
 - **Heredia Joel** - DNI: 41.158.023  
 
 
-## 📌 Propósito del Sistema
+# 📌 Propósito del Sistema
 
 Este programa es una aplicación por consola que simula el funcionamiento básico de un sistema de gestión de pasajes para la empresa **SkyRoute**.  
 
@@ -23,9 +23,9 @@ Este proyecto utiliza una **base de datos relacional** para la persistencia de l
 
 ---
 
-## ⚙️ Cómo instalar y ejecutar el programa
+# ⚙️ Cómo instalar y ejecutar el programa
 
-### 1. Instalar Python
+1. Instalar Python
 
 Este programa requiere tener instalado el intérprete de **Python** (recomendamos la última versión compatible).
 
@@ -42,7 +42,7 @@ python --version
 
 ---
 
-### 2. Obtener el archivo del programa
+2. Obtener el archivo del programa
 
 Puedes obtener el archivo `main.py` de las siguientes maneras:
 
@@ -55,7 +55,7 @@ git clone https://github.com/nanomelk/abp_programador.git
 
 ---
 
-### 3. Ejecutar el programa
+3. Ejecutar el programa
 
 1. Abre una terminal o línea de comandos.
 2. Navega a la carpeta donde se encuentra `main.py`:
@@ -73,7 +73,7 @@ python main.py
 (O `python3 main.py` si es necesario en tu sistema)
 
 ---
-🧾 Consideraciones Éticas y Legales
+## 🧾 Consideraciones Éticas y Legales
 Este proyecto no solo aborda aspectos técnicos, sino también los aspectos legales y éticos relacionados con el desarrollo del software para SkyRoute S.R.L.
 
 A continuación, se resumen los principales puntos tratados en el informe de Ética:
@@ -93,7 +93,9 @@ Botón de Arrepentimiento: Es una función obligatoria por ley (Ley 24.240 y Ley
 📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
 ABP_ETICA_2da_entrega.pdf
 
-🧩 Diseño de Base de Datos
+---
+
+## 🧩 Diseño de Base de Datos
 Se diseñó una base de datos relacional con las siguientes entidades y atributos:
 
 CLIENTES
