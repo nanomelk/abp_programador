@@ -1,4 +1,6 @@
 # ✈️ SkyRoute - Sistema de Gestión de Pasajes
+### iMPORTANTE: VER REPOSITORIO EN:
+### https://github.com/nanomelk/abp_programador.git
 
 ## 👥 Integrantes del Grupo
 
