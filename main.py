@@ -149,6 +149,28 @@ def main_menu():
         elif menu == 3:
             print("Saliendo...")
             break
+        elif menu == 4:
+                print("\n--- Botón de Arrepentimiento ---")
+                print("Esta funcionalidad permite revocar la compra de pasajes o paquetes turísticos según la normativa vigente.")
+                print("Condiciones para ejercer el derecho de arrepentimiento:")
+                print("1. El pedido debe realizarse dentro de los 60 días hábiles desde la fecha de compra.")
+                print("2. No podrá ejercerse si el pasaje ya fue utilizado o si faltan menos de 72 horas para la fecha de inicio del viaje.")
+                print("Ingrese el numero de reserva a cancelar:")
+                numero_reserva = input("Ingrese el número de reserva: ")
+                print(f"Se ha solicitado la reversión de la reserva {numero_reserva}.")
+                print("Seleccione la acción a realizar:")       
+                print(f"Cancelar la Compra. {numero_reserva}")
+                print("1. Si")
+                print("2. No")
+                opcion = int(input("Elija la opción: "))
+                if opcion == 1:
+                        print(f"La reserva {numero_reserva} ha sido cancelada exitosamente.")
+                elif opcion == 2:
+                        print("Operación cancelada. Volviendo al menú principal...")
+                        input
+                else:
+                        print("Opción inválida, por favor intente nuevamente.")
+                input("Presione Enter para volver al menú principal...")
         elif menu == 6:
             print("\n--- Acerca del Sistema ---")
             print("SkyRoute - Sistema de Gestión de Pasajes")
