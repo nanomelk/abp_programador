@@ -1,15 +1,15 @@
 # ==============================================================================
 # Propósito del Sistema:
 #
-# Este programa es una aplicacion por consola funcionamiento básico de un sistema 
+# Este programa es una aplicacion por consola funcionamiento básico de un sistema
 # de gestión de pasajes de una empresa SkyRoute. El objetivo es permitir
 # gestionar clientes, destinos y ventas de pasajes. El sistema premite registrar
 #  clientes y destinos, ventas, visualizarlas, modificarlas y eliminarlas, mediante el botón de
-# arrepentimiento. El sistema también permite ademas consultar ventas y generar reportes, 
+# arrepentimiento. El sistema también permite ademas consultar ventas y generar reportes,
 # mediante una funcionalidad de "botón de arrepentimiento".
 # El proyecto final utilizará una base de datos relacional para la persistencia
 # de los datos.
-# 
+#
 # Cómo instalar y ejecutar el programa:
 #
 # Para instalar y ejecutar este programa, siga los siguientes pasos:
@@ -39,7 +39,7 @@
 #     d. El programa se iniciará y debería mostrar un menú de opciones
 #        en la consola [11]. Interactúe con el programa seleccionando las
 #        opciones del menú.
-#|
+# |
 #   Datos de los integrantes del grupo:
 #
 # - Mechiorre Mariano Sebastián, DNI: 29.252.427
@@ -48,18 +48,15 @@
 # - Heredia Joel, DNI 41.158.023
 #
 # ==============================================================================
+from menus.clientes_menu import gestionar_clientes
+from menus.destinos_menu import gestionar_destinos
+from menus.ventas_menu import boton_arrepentimiento
+from menus.reportes_menu import mostrar_acerca_de
+from data.database import crear_conexion, cerrar_conexion
+
+
 def main_menu():
     while True:
-        """
-        1. Gestionar Clientes
-        2. Gestionar Destinos
-        3. Gestionar Ventas
-        4. Consultar Ventas
-        5. Botón de Arrepentimiento
-        6. Ver Reporte General
-        7. Acerca del Sistema
-        8. Salir
-        """
         print("Bienvenidos a SkyRoute - Sistema de Gestión de Pasajes")
         print("1. Gestionar Clientes")
         print("2. Gestionar Destinos")
@@ -69,143 +66,37 @@ def main_menu():
         print("6. Acerca del Sistema")
         print("7. Salir")
 
-        menu = int(input("Elija la opcion: "))
+        menu = int(input("Elija la opción: "))
 
         if menu == 1:
-            while True:
-                """
-                -- GESTIONAR CLIENTES --
-                1. Ver Clientes
-                2. Agregar Cliente
-                3. Modificar Cliente
-                4. Eliminar Cliente
-                5. Volver al Menú Principal
-                """
-                print("Bienvenidos a SkyRoute - Sistema de Gestión de Pasajes")
-                print("1. Ver Clientes")
-                print("2. Agregar Cliente")
-                print("3. Modificar Cliente")
-                print("4. Eliminar Cliente")
-                print("5. Volver al Menú Principal")
-                
-                menuClientes = int(input("Menu Gestionar Clientes - Elija la opcion: "))
-                if menuClientes == 1:
-                        print("Lista de Clientes")
-                        input("presiona enter para salir...")
-                elif menuClientes == 2:
-                        print("Ingrese los datos del Nuevo Cliente")
-                        razon_social = input("Ingrese Nombre y Apellido o Razon Social: ")
-                        cuil_cuit = input("Ingrese N° de CUIT o CUIL: ")
-                        telefono = input("Telefono: ")
-                        email = input("Email: ")
-                        print("Cliente registrado con exito")
-                        print("Se guardó el cliente, sus datos son: Nombre:", razon_social)
-                        print("El CUIL o CUIT", cuil_cuit)
-                        print("Telefono:", telefono)
-                        print("Email:", email)           
-                        input("presiona enter para salir...")
-                elif menuClientes == 3:
-                        print("Modificar Cliente")
-                        print("Ingrese el CUIL_CUIT del cliente a modificar")
-                        "futuro codigo, incluye select y un update"
-                        cuitModif = input("Ingrese el CUIT o CUIL del cliente a modificar: ")
-                        print('Desea modificar los siguientes datos del cliente:', cuitModif, "de Juan Perez")
-                        print("1. Si")
-                        print("2. No")
-                        menuModif = int(input("Elija la opcion: "))     
-                        if menuModif == 1:
-                                print("Ingrese los nuevos datos del cliente")
-                                razon_social = input("Ingrese Nombre y Apellido o Razon Social: ")
-                                cuil_cuit = input("Ingrese N° de CUIT o CUIL: ")
-                                telefono = input("Telefono: ")
-                                email = input("Email: ")
-                                print("Cliente modificado con exito")
-                                print("Se guardó el cliente, sus datos son: Nombre:", razon_social)
-                                print("El CUIL o CUIT", cuil_cuit)
-                                print("Telefono:", telefono)
-                                print("Email:", email)
-                                print("sus datos fueron corregidos correctamente")
-                        elif menuModif == 2:
-                                print("Volviendo al menu anterior...")
-                        else:
-                                print("Opcion Invalida-ingrese una opcion valida")                               
-                        input("presiona enter para salir...")
-                elif menuClientes == 4:
-                        print("Borrar Cliente")
-                        print("Ingrese el CUIL_CUIT del cliente a borrar")
-                        cuitDelete = input("Ingrese el CUIT o CUIL del cliente a modificar: ")
-                        print('Desea eliminar el cliente:', cuitDelete)
-                        "futuro codigo, incluye select y un delete"
-                        "print('Esta seguro que desea eliminar el cliente: CUIT:XXXXXXXXX')"
-                        "print('Cliente CUIT:XXXXXXXXXXX correctamente eliminado de la base)"
-                        input("presiona enter para salir...")    
-                elif menuClientes == 5:
-                        break
-                else: 
-                        print("Opcion Invalida-ingrese una opcion valida")
+            gestionar_clientes()
         elif menu == 2:
-            print("You selected Option 2")
-            input("Press Enter to continue...")
+            gestionar_destinos()
         elif menu == 3:
-            print("Saliendo...")
-            break
+            print("Aquí se manejarán las ventas. (Funcionalidad pendiente)")
+            input("Presiona Enter para continuar...")
         elif menu == 4:
-                print("\n--- Botón de Arrepentimiento ---")
-                print("Esta funcionalidad permite revocar la compra de pasajes o paquetes turísticos según la normativa vigente.")
-                print("Condiciones para ejercer el derecho de arrepentimiento:")
-                print("1. El pedido debe realizarse dentro de los 60 días hábiles desde la fecha de compra.")
-                print("2. No podrá ejercerse si el pasaje ya fue utilizado o si faltan menos de 72 horas para la fecha de inicio del viaje.")
-                print("Ingrese el numero de reserva a cancelar:")
-                numero_reserva = input("Ingrese el número de reserva: ")
-                print(f"Se ha solicitado la reversión de la reserva {numero_reserva}.")
-                print("Seleccione la acción a realizar:")       
-                print(f"Cancelar la Compra. {numero_reserva}")
-                print("1. Si")
-                print("2. No")
-                opcion = int(input("Elija la opción: "))
-                if opcion == 1:
-                        print(f"La reserva {numero_reserva} ha sido cancelada exitosamente.")
-                elif opcion == 2:
-                        print("Operación cancelada. Volviendo al menú principal...")
-                        input
-                else:
-                        print("Opción inválida, por favor intente nuevamente.")
-                input("Presione Enter para volver al menú principal...")
+            boton_arrepentimiento()
+        elif menu == 5:
+            print("Aquí irán los reportes generales. (Funcionalidad pendiente)")
+            input("Presiona Enter para continuar...")
         elif menu == 6:
-            print("\n--- Acerca del Sistema ---")
-            print("SkyRoute - Sistema de Gestión de Pasajes")
-            print("Versión: 1.0")
-            print("Desarrollado por los integrantes del grupo:\n")
-            print("- Mechiorre Mariano Sebastián, DNI: 29.252.427")
-            print("- Roque Martín Miguel, DNI: 23.824.997")
-            print("- Quispe Christian, DNI: 23.198.068")
-            print("- Heredia Joel, DNI: 41.158.023\n")
-
-            print("Descripción:")
-            print("Este sistema permite gestionar clientes, destinos y ventas de pasajes,")
-            print("incluyendo funcionalidades como consultas, reportes y botón de arrepentimiento.\n")
-
-            print("Derechos de autor:")
-            print("© 2025 SkyRoute. Todos los derechos reservados.")
-            print("Este software es propiedad exclusiva de los desarrolladores mencionados.")
-            print("Queda estrictamente prohibida la copia, distribución, modificación o uso no autorizado")
-            print("de este código sin el consentimiento explícito por escrito de los autores.\n")
-
-            input("Presione Enter para volver al menú principal...")
+            mostrar_acerca_de()
         elif menu == 7:
-                print("Esta seguro de salir")
-                print("1. Si")
-                print("2. No")
-                menuSalir = int(input("Elija la opcion: "))
-                if menuSalir == 1:
-                        print("Saliendo...")
-                        break
-                elif menuSalir == 2:
-                        print("Volviendo al menu principal...")
-                else:
-                        print("Opcion Invalida-ingrese una opcion valida")
-                        input("presiona enter para volver al menu anterior...") 
-                
-        
+            salir = int(input("¿Está seguro de salir? (1. Sí / 2. No): "))
+            if salir == 1:
+                print("Saliendo...")
+                break
+            else:
+                print("Volviendo al menú principal...")
+        else:
+            print("Opción inválida")
+
+
 if __name__ == "__main__":
-    main_menu()
+    conexion = crear_conexion()  # Intentamos conectar a la base
+    if conexion:
+        try:
+            main_menu()
+        finally:
+            cerrar_conexion(conexion)  # Nos aseguramos de cerrarla siempre
