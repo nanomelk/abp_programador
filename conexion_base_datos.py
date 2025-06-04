@@ -1,17 +1,18 @@
+# conexion_base_datos.py
 import mysql.connector
-import logging
 from mysql.connector import errorcode
+from config import DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, PORT
 
 
 # Función para crear y devolver la conexión
 def crear_conexion():
     try:
         conexion = mysql.connector.connect(
-            host="127.0.0.1",
-            port=3307,
-            user="root",
-            password="1234",
-            database="abp_programador",
+            host=DB_HOST,
+            port=PORT,
+            user=DB_USER,
+            password=DB_PASSWORD,
+            database=DB_NAME,
         )
         if conexion.is_connected():
             print("Conexión exitosa a la base de datos")

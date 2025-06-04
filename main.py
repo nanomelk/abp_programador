@@ -42,17 +42,17 @@
 # |
 #   Datos de los integrantes del grupo:
 #
-# - Mechiorre Mariano Sebastián, DNI: 29.252.427
+# - Melchiorre Mariano Sebastián, DNI: 29.252.427
 # - Roque Martín Miguel, DNI: 23.824.997
 # - Quispe Christian, DNI 23.198.068
 # - Heredia Joel, DNI 41.158.023
 #
 # ==============================================================================
-from menus.clientes_menu import gestionar_clientes
-from menus.destinos_menu import gestionar_destinos
-from menus.ventas_menu import boton_arrepentimiento
-from menus.reportes_menu import mostrar_acerca_de
-from data.database import crear_conexion, cerrar_conexion
+from gestion_clientes import gestionar_clientes
+from gestion_destinos import gestionar_destinos
+from gestion_ventas import boton_arrepentimiento
+from reportes_menu import mostrar_acerca_de
+from conexion_base_datos import crear_conexion, cerrar_conexion
 
 
 def main_menu():
