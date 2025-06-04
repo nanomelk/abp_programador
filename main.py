@@ -50,7 +50,7 @@
 # ==============================================================================
 from gestion_clientes import gestionar_clientes
 from gestion_destinos import gestionar_destinos
-from gestion_ventas import boton_arrepentimiento
+from gestion_ventas import boton_arrepentimiento, menu_ventas
 from reportes_menu import mostrar_acerca_de
 from conexion_base_datos import crear_conexion, cerrar_conexion
 
@@ -73,8 +73,8 @@ def main_menu():
         elif menu == 2:
             gestionar_destinos()
         elif menu == 3:
-            print("Aquí se manejarán las ventas. (Funcionalidad pendiente)")
-            input("Presiona Enter para continuar...")
+            print("Compras de paquetes de viajes, PRESTE ATENCIÓN A LOS DATOS")
+            menu_ventas()
         elif menu == 4:
             boton_arrepentimiento()
         elif menu == 5:
