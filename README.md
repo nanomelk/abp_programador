@@ -215,7 +215,7 @@ python main.py
 
 ## 🧾 Poster del Proyecto
 
-Ver archivo `Poster_ABP_2025.pdf` incluido en el repositorio.
+Ver archivo `Defensa en el Proyecto - ABP.png` incluido en el repositorio.
 
 ---
 
