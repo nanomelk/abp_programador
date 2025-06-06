@@ -94,22 +94,89 @@ El archivo `estructura_y_datos.sql` incluye:
 
 ---
 
-## 🧾 Aspectos Éticos y Legales
+# 🧾 Consideraciones Éticas y Legales
 
-### Ley 11.723 - Propiedad Intelectual
-ROCKET SAS (grupo desarrollador) retiene la propiedad intelectual del código, otorgando licencia de uso a SkyRoute S.R.L.
+Este proyecto no solo aborda aspectos técnicos, sino también los aspectos legales y éticos relacionados con el desarrollo del software para la empresa ficticia **SkyRoute S.R.L.**, conforme a la legislación vigente en Argentina.
 
-### Ley 25.326 - Protección de Datos Personales
-Los datos de los clientes son gestionados bajo la figura de "responsable del tratamiento", cumpliendo la legislación vigente.
+### 📘 Aplicación de la Ley 11.723 - Propiedad Intelectual
 
-### Botón de Arrepentimiento
-Se implementa conforme a las leyes 24.240 y 26.994, permitiendo la anulación de una compra dentro de los primeros 60 días, salvo que falten menos de 72h para el viaje.
+El código fuente del sistema desarrollado está protegido por la **Ley 11.723**, que regula los derechos de autor en Argentina, incluyendo expresamente a los programas de computación.
 
-### Convenio de Budapest (cibercrimen)
-Si el sistema se implementa en España y ocurre un incidente desde Argentina, se aplican los principios de cooperación internacional y jurisdicción cruzada según el tratado.
+#### 1. Reconocimiento de autoría y coautoría
 
-### Inteligencia Artificial
-Si se integrara IA en el futuro, se seguiría la Ley N° 27.701 (Argentina) y regulaciones europeas como el **AI Act**, además de aplicar principios éticos como transparencia, no discriminación y protección de datos.
+Este proyecto fue desarrollado en equipo. La coautoría está documentada en el encabezado de cada archivo fuente y en este `README.md`:
+
+> **Sistema de Gestión de Pasajes Aéreos - SkyRoute S.R.L.**  
+> **Autores**: Mariano Sebastián Mechiorre, Martín Miguel Roque, Christian Quispe, Joel Heredia  
+> **Fecha de creación**: junio 2025  
+> **Protegido por la Ley 11.723 de Propiedad Intelectual, Argentina**
+
+#### 2. Registro del software
+
+Se recomienda registrar el sistema en la **Dirección Nacional del Derecho de Autor (DNDA)** presentando el código fuente y la documentación técnica. Este registro actúa como prueba legal de autoría y fecha de creación en caso de conflictos.
+
+#### 3. Establecimiento de una licencia de uso
+
+> **Este software fue desarrollado con fines académicos. Todos los derechos están reservados a los autores según la Ley 11.723. No se permite su uso, distribución o modificación sin autorización expresa.**
+
+Si en el futuro se decide compartir el código públicamente, podrá aplicarse una licencia de software libre apropiada (por ejemplo, MIT o GPL), respetando siempre la autoría original.
+
+#### 4. Conservación de evidencias
+
+Durante el desarrollo del sistema se utilizó **GitHub** como sistema de control de versiones, registrando cada modificación en el código. También se conservaron diagramas, documentación técnica y decisiones del equipo, lo que constituye evidencia válida en caso de disputas legales.
+
+---
+
+### 🛡️ Aplicación de la Ley 25.326 - Protección de Datos Personales
+
+La base de datos del sistema fue diseñada cumpliendo con los principios de la **Ley 25.326** que regula el uso de datos personales en Argentina.
+
+#### 🔐 Medidas adoptadas:
+
+- **Consentimiento informado**: El sistema contempla incluir (en futuras versiones) una aceptación expresa del cliente sobre el uso de sus datos.
+- **Minimización de datos**: Solo se almacena la información necesaria (CUIT, razón social, email). No se solicitan datos sensibles innecesarios.
+- **Finalidad del uso**: Los datos solo se usan para gestionar reservas y ventas de pasajes. No se usan para fines comerciales ni se comparten con terceros.
+- **Seguridad**: Se restringe el acceso a los datos a través de autenticación, y se contemplan medidas futuras como encriptación.
+- **Derechos ARCO**: El sistema contempla funciones como la modificación o eliminación de datos mediante acciones como el botón de arrepentimiento.
+
+---
+
+### ⚖️ Estructura Legal del Grupo
+
+#### 🔹 Figura legal: Sociedad por Acciones Simplificada (SAS)
+
+El grupo adopta la figura de **ROCKET SAS**, una **SAS** que brinda agilidad, protección patrimonial y capacidad de escalar el emprendimiento a futuro.
+
+#### 🔹 Relación con SkyRoute S.R.L.
+
+Se establece mediante un **contrato de licencia de uso**, donde:
+
+- **ROCKET SAS mantiene la propiedad del software.**
+- **SkyRoute S.R.L. obtiene el derecho de uso.**
+- El contrato incluye soporte técnico y mantenimiento, generando una relación comercial continua.
+
+#### 🔹 En caso de cambio de proveedor
+
+Si SkyRoute decide cambiar de equipo proveedor:
+
+- ROCKET SAS, como persona jurídica, actúa según lo estipulado en el contrato.
+- Se aplican cláusulas de rescisión y comunicación formal.
+- Los integrantes actúan profesionalmente para proteger los intereses de la sociedad.
+
+#### 🔹 Propiedad de los datos y del código
+
+- **Los datos del sistema** son propiedad de **SkyRoute S.R.L.**, quien actúa como “responsable del tratamiento” según la Ley 25.326.
+- **El código fuente** es propiedad intelectual de **ROCKET SAS**, conforme a la Ley 11.723.
+
+#### 🔹 Botón de Arrepentimiento
+
+Implementado según las **Leyes 24.240 y 26.994**, el botón permite anular una compra si:
+- No pasaron más de **60 días** desde la venta.
+- Faltan más de **72 horas** para la salida del viaje.
+
+Esto asegura los derechos del consumidor conforme a la legislación argentina vigente.
+
+---
 
 ---
 
