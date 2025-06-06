@@ -75,6 +75,8 @@ def gestionar_clientes():
 
             print(f"Cliente con CUIT/CUIL {cuit} modificado con éxito.")
             input("Presione Enter para continuar...")
+        # Se prevee funcionalidad para manejar los errores que da la base cuando se intenta
+        # eliminar un cliente que tiene ventas asociadas, por ahora se deja sin funcionalidad
         elif menu == 4:
             cuit = input("Ingrese el CUIT/CUIL del cliente a eliminar: ")
             conn = db.crear_conexion()
@@ -88,6 +90,7 @@ def gestionar_clientes():
             else:
                 print(f"Cliente encontrado: {cliente[1]} - {cliente[0]} - {cliente[2]}")
                 confirmacion = input("¿Está seguro de eliminar este cliente? (s/n): ")
+                # lower se asegura de que la entrada sea en minúsculas
                 if confirmacion.lower() == "s":
                     sqlEliminarCliente = "DELETE FROM clientes WHERE cuit = %s"
                     cur.execute(sqlEliminarCliente, (cuit,))

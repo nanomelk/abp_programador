@@ -1,6 +1,7 @@
 import conexion_base_datos as db
 
 
+# Gestionar destinos de viajes
 def gestionar_destinos():
     while True:
         print("\n-- GESTIONAR DESTINOS --")
@@ -37,8 +38,9 @@ def gestionar_destinos():
             conn = db.crear_conexion()
             cur = conn.cursor()
             cur.execute("SELECT * FROM destinos")
+            # Cargamos los destinos en la variable destinos
             destinos = cur.fetchall()
-
+            # Mostramos los destinos cargados
             if destinos:
                 print("\nLista de Destinos:")
                 for d in destinos:
@@ -49,10 +51,12 @@ def gestionar_destinos():
             cur.close()
             db.cerrar_conexion(conn)
             input("Presione Enter para continuar...")
+        # modificar destino
         elif menu == 3:
             destino_id = input("Ingrese el ID del destino a modificar: ")
             conn = db.crear_conexion()
             cur = conn.cursor()
+            # buscamos el destino por ID
             cur.execute("SELECT * FROM destinos WHERE destino_id = %s", (destino_id,))
             destino = cur.fetchone()
 
@@ -63,6 +67,7 @@ def gestionar_destinos():
                 input("Presione Enter para continuar...")
                 continue
             else:
+                # mostramos los datos del destino encontrado y Solicitamos los nuevos datos
                 print(
                     f"Destino encontrado: ID:{destino[0]} - Nombre:{destino[1]} - Descripción:{destino[2]}"
                 )
@@ -84,7 +89,7 @@ def gestionar_destinos():
                     )
                     or destino[4]
                 )
-
+                # Modificamos el destino con los nuevos datos (UPDATE de la base de datos)
                 sqlModificarDestino = "UPDATE destinos SET ciudad = %s, descripcion = %s, precio_noche = %s, noches = %s WHERE destino_id = %s"
                 cur.execute(
                     sqlModificarDestino,
@@ -92,9 +97,43 @@ def gestionar_destinos():
                 )
                 conn.commit()
                 print(f"Destino {destino_id} modificado con éxito.")
+        # falta agregar manejo de errores para cuando se desea eliminar un destino que tiene ventas asociadas
         elif menu == 4:
-            print("Saliendo del menú de gestión de destinos...")
-            db.cerrar_conexion(db.crear_conexion())
+            print("Ingrese el Id del destino a eliminar...")
+            destino_id = input("ID del Destino: ")
+            conn = db.crear_conexion()
+            cur = conn.cursor()
+            # Verificamos si existe el destino
+            cur.execute("SELECT * FROM destinos WHERE destino_id = %s", (destino_id,))
+            destino = cur.fetchone()
+            if not destino:
+                print(f"No se encontró un destino con ID {destino_id}.")
+                cur.close()
+                db.cerrar_conexion(conn)
+                input("Presione Enter para continuar...")
+                continue
+            else:
+                print(
+                    f"Destino encontrado: ID:{destino[0]} - Nombre:{destino[1]} - Descripción:{destino[2]}"
+                )
+                confirmacion = input(
+                    "¿Está seguro de que desea eliminar este destino? (s/n): "
+                )
+                if confirmacion.lower() == "s":
+                    sqlEliminarDestino = "DELETE FROM destinos WHERE destino_id = %s"
+                    cur.execute(sqlEliminarDestino, (destino_id,))
+                    conn.commit()
+                    print(f"Destino con ID {destino_id} eliminado con éxito.")
+                    cur.close()
+                    db.cerrar_conexion(conn)
+                    input("Presione Enter para continuar...")
+                    continue
+                else:
+                    print("Eliminación cancelada.")
+                    cur.close()
+                    db.cerrar_conexion(conn)
+                    input("Presione Enter para continuar...")
+                    continue
             break
         elif menu == 5:
             print("Volviendo al menú principal...")
