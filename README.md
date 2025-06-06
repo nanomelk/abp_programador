@@ -1,135 +1,165 @@
 # ✈️ SkyRoute - Sistema de Gestión de Pasajes
-### iMPORTANTE: VER REPOSITORIO EN:
-### https://github.com/nanomelk/abp_programador.git
+
+**Repositorio del Proyecto**:  
+🔗 [https://github.com/nanomelk/abp_programador.git](https://github.com/nanomelk/abp_programador.git)
 
 ## 👥 Integrantes del Grupo
 
-- **Mechiorre Mariano Sebastián** - DNI: 29.252.427  
+- **Mechiorre Mariano Sebastián** - DNI: 29.252.427   
 - **Roque Martín Miguel** - DNI: 23.824.997  
 - **Quispe Christian** - DNI: 23.198.068  
 - **Heredia Joel** - DNI: 41.158.023  
 
+---
 
-# 📌 Propósito del Sistema
+## 📌 Descripción del Proyecto
 
-Este programa es una aplicación por consola que simula el funcionamiento básico de un sistema de gestión de pasajes para la empresa **SkyRoute**.  
+SkyRoute es una aplicación de consola desarrollada en Python para simular el funcionamiento básico de un sistema de gestión de pasajes. Permite realizar operaciones sobre clientes, destinos y ventas, incluyendo la funcionalidad legal del botón de arrepentimiento.
 
-Su objetivo principal es permitir la gestión de **clientes**, **destinos** y **ventas de pasajes**, ofreciendo funcionalidades como:
-
-- Registro y modificación de clientes y destinos.
-- Venta de pasajes.
-- Visualización, modificación y eliminación de ventas mediante el _botón de arrepentimiento_.
-- Generación de reportes y consultas de ventas.
-
-Este proyecto utiliza una **base de datos relacional** para la persistencia de los datos.
+Este sistema está orientado a brindar una solución simple pero robusta a una empresa ficticia de viajes, e incluye conexión a una base de datos MySQL para persistencia de los datos.
 
 ---
 
-# ⚙️ Cómo instalar y ejecutar el programa
+## ⚙️ Estructura del Proyecto
 
-1. Instalar Python
-
-Este programa requiere tener instalado el intérprete de **Python** (recomendamos la última versión compatible).
-
-**Pasos:**
-- Descarga el instalador desde [python.org](https://www.python.org/)
-- Durante la instalación, **asegúrate de marcar la opción "Add Python to PATH"**.
-- Verifica la instalación abriendo una terminal o línea de comandos y ejecutando:
-
-```bash
-python --version
-```
-
-(O bien `py --version` o `python3 --version`, según tu sistema operativo)
+skyroute/ <br>
+├── config.py # Configuración de la base de datos <br>
+├── conexion_base_datos.py # Módulo de conexión MySQL  (Funciones: crear_Conexion() y cerrar_conexion() )<br>
+├── gestion_clientes.py # Funcionalidades y menú de clientes <br>
+├── gestion_destinos.py # Funcionalidades y menú de destinos <br>
+├── gestion_ventas.py # Funcionalidades y menú de ventas y botón de arrepentimiento <br>
+├── main.py # Menú principal <br>
+├── DER.sql # Script SQL con DDL y DML comentado <br>
+├── README.md # Este archivo <br>
 
 ---
 
-2. Obtener el archivo del programa
+## 🚀 Funcionalidades del Sistema
 
-Puedes obtener el archivo `main.py` de las siguientes maneras:
+### 1. Gestión de Clientes
+- Agregar cliente (razón social, CUIT, email)
+- Listar clientes registrados
+- Modificar cliente
+- Eliminar cliente
 
-- Descargándolo directamente.
-- Clonando el repositorio desde GitHub:
+### 2. Gestión de Destinos
+- Registrar destino (ciudad, descripción, precio, noches)
+- Listar destinos
+- Modificar destino
+- Eliminar destino
 
-```bash
+### 3. Gestión de Ventas
+- Registrar venta (cliente, destino, fecha y costo)
+- Estado de la venta: "Activa" o "Anulada"
+
+### 4. Botón de Arrepentimiento
+- Anular ventas dentro de los primeros 60 días desde la compra
+- Rechazar anulaciones si faltan menos de 72h para la salida
+- Cambio automático del estado de la venta a "Anulada"
+
+---
+
+## 🧠 Contenidos de Programación Aplicados
+
+- Modularización de código (funciones y archivos separados)
+- Estructuras de control (`if`, `while`, `for`)
+- Listas y diccionarios
+- Conexión a MySQL con `mysql.connector`
+- Uso de fechas con `datetime`
+- Git y GitHub para control de versiones
+
+---
+
+## 💾 Base de Datos
+
+Se implementó una base de datos relacional en MySQL que incluye:
+
+### Tablas creadas:
+- `clientes`  
+- `destinos`  
+- `estado`  
+- `ventas`  
+
+### Script SQL:
+El archivo `estructura_y_datos.sql` incluye:
+- Sentencias DDL (creación de tablas, claves primarias y foráneas)
+- Sentencias DML para poblar datos (mínimo 3 registros por tabla)
+- 5 consultas SQL de ejemplo:
+  - Listar todos los clientes
+  - Ventas en una fecha específica
+  - Última venta por cliente
+  - Destinos que empiezan con “S”
+  - Cantidad de ventas por ciudad
+** Ejemplos Adjuntos en DER.sql
+
+---
+
+## 🧾 Aspectos Éticos y Legales
+
+### Ley 11.723 - Propiedad Intelectual
+ROCKET SAS (grupo desarrollador) retiene la propiedad intelectual del código, otorgando licencia de uso a SkyRoute S.R.L.
+
+### Ley 25.326 - Protección de Datos Personales
+Los datos de los clientes son gestionados bajo la figura de "responsable del tratamiento", cumpliendo la legislación vigente.
+
+### Botón de Arrepentimiento
+Se implementa conforme a las leyes 24.240 y 26.994, permitiendo la anulación de una compra dentro de los primeros 60 días, salvo que falten menos de 72h para el viaje.
+
+### Convenio de Budapest (cibercrimen)
+Si el sistema se implementa en España y ocurre un incidente desde Argentina, se aplican los principios de cooperación internacional y jurisdicción cruzada según el tratado.
+
+### Inteligencia Artificial
+Si se integrara IA en el futuro, se seguiría la Ley N° 27.701 (Argentina) y regulaciones europeas como el **AI Act**, además de aplicar principios éticos como transparencia, no discriminación y protección de datos.
+
+---
+
+## ▶️ Instrucciones de Ejecución
+
+1. Tener instalado Python 3.x
+2. Clonar el repositorio:
 git clone https://github.com/nanomelk/abp_programador.git
-```
 
----
-
-3. Ejecutar el programa
-
-1. Abre una terminal o línea de comandos.
-2. Navega a la carpeta donde se encuentra `main.py`:
-
-```bash
-cd ruta/a/la/carpeta
-```
-
-3. Ejecuta el programa con:
-
-```bash
+3. Iniciar el programa:
+cd abp_programador
 python main.py
-```
-
-(O `python3 main.py` si es necesario en tu sistema)
-
----
-## 🧾 Consideraciones Éticas y Legales
-Este proyecto no solo aborda aspectos técnicos, sino también los aspectos legales y éticos relacionados con el desarrollo del software para SkyRoute S.R.L.
-
-A continuación, se resumen los principales puntos tratados en el informe de Ética:
-
-Figura Legal del Grupo: El grupo operará como una Sociedad por Acciones Simplificada (SAS) bajo el nombre ROCKET SAS, lo que brinda flexibilidad, protección patrimonial y facilidad para atraer inversiones.
-
-Relación con SkyRoute S.R.L.: Se establecerá mediante un contrato de licencia de uso, manteniendo ROCKET SAS la propiedad del software. Se incluye soporte técnico y mantenimiento.
-
-Cambio de Proveedor: En caso de que SkyRoute decida contratar a otro grupo, ROCKET SAS actuará conforme a las cláusulas contractuales, protegiendo los intereses de la sociedad.
-
-Propiedad de los Datos: Los datos ingresados en el sistema son propiedad de SkyRoute S.R.L., quien es el "responsable del tratamiento" según la Ley 25.326 de protección de datos personales.
-
-Propiedad del Código: El código fuente es propiedad de ROCKET SAS, conforme a la Ley de Propiedad Intelectual (Ley 11.723).
-
-Botón de Arrepentimiento: Es una función obligatoria por ley (Ley 24.240 y Ley 26.994), que permite a los consumidores revocar operaciones realizadas digitalmente en un plazo de hasta 60 días hábiles.
-
-📄 Para más detalles, puedes consultar el archivo completo del informe de Ética:
-ABP_ETICA_2da_entrega.pdf
 
 ---
 
-## 🧩 Diseño de Base de Datos
-Se diseñó una base de datos relacional con las siguientes entidades y atributos:
+## 🧪 Pruebas y Validaciones
 
-CLIENTES
-Atributos: cuit, razón_social, correo_electronico
+- Todos los módulos fueron testeados localmente con conexión MySQL activa.
+- Se validó el botón de arrepentimiento con fechas límite simuladas.
+- Se corroboró que no se puede anular una venta si pasaron más de 60 días (con un escala a 60 segundos) o si faltan menos de 72h para la salida.
 
-PK: cuit
+---
 
-VENTAS
-Atributos: código_ventas, cuit, código_destino, código_estado, fecha_venta
+## 🎥 Video de Presentación
 
-PK: código_ventas
+➡️ Video en el que todos los integrantes comentan brevemente:
+- Organización del grupo
+- Dificultades encontradas
+- Qué les gustó del proyecto
+- Qué mejorarían
+- Temas en los que necesitan más práctica
 
-FK: cuit, código_destino, código_estado
+*(Link al video se incluirá al momento de la entrega)*
 
-ESTADO
-Atributos: código_estado, tipo_estado
+---
 
-PK: código_estado
+## 🧾 Poster del Proyecto
 
-Se usa para optimizar almacenamiento y permitir nuevos estados en el futuro.
+Ver archivo `Poster_ABP_2025.pdf` incluido en el repositorio.
 
-DESTINO
-Atributos: código_destino, codigo_ciudad, costo_viaje
+---
 
-PK: código_destino
+## 📎 Archivos incluidos para entrega
 
-PAISES
-Atributos: código_pais, nombre_pais
+- Código fuente completo (`.py`)
+- Script SQL (`DER.sql`)
+- Documento de Ética (`ABP_ETICA_2da_entrega.pdf`)
+- README actualizado
+- Poster oficial
 
-PK: código_pais
+---
 
-Ayuda a mantener la base en tercera forma normal y evitar dependencias transitivas.
-
-Más detalles disponibles en el archivo: Entidades y Atributos elegidos para el diseño de la Base de Datos.pdf
-
+*¡Gracias por revisar nuestro proyecto!*
