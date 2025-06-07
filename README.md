@@ -54,6 +54,8 @@ skyroute/ <br>
 
 ### 4. Botón de Arrepentimiento
 - Anular ventas dentro de los primeros 60 días desde la compra
+- (el sistema escala los dias en min, por lo que despues de 60 min,
+-  no se puede anular la compra con el botón de arrepentimeinto)
 - Rechazar anulaciones si faltan menos de 72h para la salida
 - Cambio automático del estado de la venta a "Anulada"
 
@@ -81,7 +83,7 @@ Se implementó una base de datos relacional en MySQL que incluye:
 - `ventas`  
 
 ### Script SQL:
-El archivo `estructura_y_datos.sql` incluye:
+El archivo `DER.sql` incluye:
 - Sentencias DDL (creación de tablas, claves primarias y foráneas)
 - Sentencias DML para poblar datos (mínimo 3 registros por tabla)
 - 5 consultas SQL de ejemplo:
@@ -107,19 +109,19 @@ El código fuente del sistema desarrollado está protegido por la **Ley 11.723**
 Este proyecto fue desarrollado en equipo. La coautoría está documentada en el encabezado de cada archivo fuente y en este `README.md`:
 
 > **Sistema de Gestión de Pasajes Aéreos - SkyRoute S.R.L.**  
-> **Autores**: Mariano Sebastián Mechiorre, Martín Miguel Roque, Christian Quispe, Joel Heredia  
+> **Autores**: Mariano Sebastián Mechiorre, Martín Miguel Roque, Christian Quispe, Joel Heredia **El código fuente** es propiedad intelectual de **ROCKET SAS**
 > **Fecha de creación**: junio 2025  
 > **Protegido por la Ley 11.723 de Propiedad Intelectual, Argentina**
 
 #### 2. Registro del software
 
-Se recomienda registrar el sistema en la **Dirección Nacional del Derecho de Autor (DNDA)** presentando el código fuente y la documentación técnica. Este registro actúa como prueba legal de autoría y fecha de creación en caso de conflictos.
+Antes de su entrega al cliente se registrará la propiedad intelectual en la **Dirección Nacional del Derecho de Autor (DNDA)** presentando el código fuente y la documentación técnica. Este registro actúa como prueba legal de autoría y fecha de creación en caso de conflictos.
 
 #### 3. Establecimiento de una licencia de uso
 
 > **Este software fue desarrollado con fines académicos. Todos los derechos están reservados a los autores según la Ley 11.723. No se permite su uso, distribución o modificación sin autorización expresa.**
 
-Si en el futuro se decide compartir el código públicamente, podrá aplicarse una licencia de software libre apropiada (por ejemplo, MIT o GPL), respetando siempre la autoría original.
+Si en el futuro se decide compartir el código públicamente, podrá aplicarse una licencia de software libre apropiada, respetando siempre la autoría original.
 
 #### 4. Conservación de evidencias
 
@@ -136,8 +138,7 @@ La base de datos del sistema fue diseñada cumpliendo con los principios de la *
 - **Consentimiento informado**: El sistema contempla incluir (en futuras versiones) una aceptación expresa del cliente sobre el uso de sus datos.
 - **Minimización de datos**: Solo se almacena la información necesaria (CUIT, razón social, email). No se solicitan datos sensibles innecesarios.
 - **Finalidad del uso**: Los datos solo se usan para gestionar reservas y ventas de pasajes. No se usan para fines comerciales ni se comparten con terceros.
-- **Seguridad**: Se restringe el acceso a los datos a través de autenticación, y se contemplan medidas futuras como encriptación.
-- **Derechos ARCO**: El sistema contempla funciones como la modificación o eliminación de datos mediante acciones como el botón de arrepentimiento.
+- **Seguridad**: Se restringirá el acceso a los datos a través de autenticación, y se contemplan medidas futuras como encriptación.
 
 ---
 
@@ -152,8 +153,7 @@ El grupo adopta la figura de **ROCKET SAS**, una **SAS** que brinda agilidad, pr
 Se establece mediante un **contrato de licencia de uso**, donde:
 
 - **ROCKET SAS mantiene la propiedad del software.**
-- **SkyRoute S.R.L. obtiene el derecho de uso.**
-- El contrato incluye soporte técnico y mantenimiento, generando una relación comercial continua.
+- **SkyRoute S.R.L. obtiene el derecho de uso.** mientras que persista soporte técnico y mantenimiento, generando una relación comercial continua.
 
 #### 🔹 En caso de cambio de proveedor
 
@@ -224,6 +224,7 @@ Ver archivo `Defensa en el Proyecto - ABP.png` incluido en el repositorio.
 - Código fuente completo (`.py`)
 - Script SQL (`DER.sql`)
 - Documento de Ética (`ABP_ETICA_2da_entrega.pdf`)
+- Regimen Legal de la Propiedad Intelectual.docx (Este amplía la informacion de este Readme)
 - README actualizado
 - Poster oficial
 
