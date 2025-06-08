@@ -209,7 +209,8 @@ python main.py
 - Qué mejorarían
 - Temas en los que necesitan más práctica
 
-ABP_Programador.mp4
+Video disponible en:
+https://www.youtube.com/watch?v=M_ipnPU9k9U 
 
 ---
 
