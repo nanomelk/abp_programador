@@ -209,7 +209,7 @@ python main.py
 - Qué mejorarían
 - Temas en los que necesitan más práctica
 
-*(Link al video se incluirá al momento de la entrega)*
+ABP_Programador.mp4
 
 ---
 
